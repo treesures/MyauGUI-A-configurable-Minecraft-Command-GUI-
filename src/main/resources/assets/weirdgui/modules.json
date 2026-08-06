@@ -1,0 +1,2496 @@
+{
+  "_comment": [
+    "weirdGUI configuration. Edit this file to match your client version.",
+    "No recompiling needed - restart the game (or run /gui reload) to apply.",
+    "toggleCommand/keybindCommand support {name} = module toggleName.",
+    "Each setting sends: \"<command> <value>\" when its value changes.",
+    "Setting types: check (on/off), slider (number), combo (list), text (free input).",
+    "Leave a setting \"command\" empty to make it GUI-only (sends nothing)."
+  ],
+  "version": 2,
+  "toggleCommand": ".t {name}",
+  "keybindCommand": ".bind {name} {key}",
+  "guiKey": 54,
+  "categories": [
+    "COMBAT",
+    "MOVEMENT",
+    "PLAYER",
+    "RENDER",
+    "OTHER",
+    "CLIENT"
+  ],
+  "modules": [
+    {
+      "name": "GUI",
+      "category": "HUD",
+      "type": "clickgui",
+      "key": 54
+    },
+    {
+      "name": "AimAssist",
+      "category": "COMBAT",
+      "toggleName": "AimAssist",
+      "settings": [
+        {
+          "name": "Horizontal Speed",
+          "type": "slider",
+          "value": 5,
+          "min": 0,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".aimassist horizontal-speed",
+          "decimals": 1
+        },
+        {
+          "name": "Vertical Speed",
+          "type": "slider",
+          "value": 5,
+          "min": 0,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".aimassist vertical-speed",
+          "decimals": 1
+        },
+        {
+          "name": "Smoothing",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".aimassist smoothing"
+        },
+        {
+          "name": "Range",
+          "type": "slider",
+          "value": 5,
+          "min": 3,
+          "max": 8,
+          "onlyInt": false,
+          "command": ".aimassist range",
+          "decimals": 1
+        },
+        {
+          "name": "FOV",
+          "type": "slider",
+          "value": 180,
+          "min": 1,
+          "max": 360,
+          "onlyInt": true,
+          "command": ".aimassist fov"
+        },
+        {
+          "name": "Weapons Only",
+          "type": "check",
+          "value": false,
+          "command": ".aimassist weapons-only"
+        },
+        {
+          "name": "Bot Check",
+          "type": "check",
+          "value": false,
+          "command": ".aimassist bot-check"
+        },
+        {
+          "name": "Teams",
+          "type": "check",
+          "value": false,
+          "command": ".aimassist teams"
+        }
+      ]
+    },
+    {
+      "name": "AntiDebuff",
+      "category": "COMBAT",
+      "toggleName": "AntiDebuff",
+      "settings": [
+        {
+          "name": "Blindness",
+          "type": "check",
+          "value": false,
+          "command": ".antidebuff blindness"
+        },
+        {
+          "name": "Nausea",
+          "type": "check",
+          "value": false,
+          "command": ".antidebuff nausea"
+        }
+      ]
+    },
+    {
+      "name": "ChestESP",
+      "category": "RENDER",
+      "toggleName": "chestesp",
+      "settings": [
+        {
+          "name": "Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".chestesp tracers"
+        }
+      ]
+    },
+    {
+      "name": "HUD",
+      "category": "CLIENT",
+      "toggleName": "hud",
+      "settings": [
+        {
+          "name": "Color Preset",
+          "type": "combo",
+          "value": "RAINBOW",
+          "options": [
+            "RAINBOW",
+            "CHROMA",
+            "ASTOLFO",
+            "CUSTOM1",
+            "CUSTOM12",
+            "CUSTOM123"
+          ],
+          "command": ".hud color-preset",
+          "lowercase": true
+        },
+        {
+          "name": "Position-X",
+          "type": "combo",
+          "value": "LEFT",
+          "options": [
+            "LEFT",
+            "RIGHT"
+          ],
+          "command": ".hud position-x",
+          "lowercase": true
+        },
+        {
+          "name": "Position-Y",
+          "type": "combo",
+          "value": "TOP",
+          "options": [
+            "TOP",
+            "BOTTOM"
+          ],
+          "command": ".hud position-y",
+          "lowercase": true
+        },
+        {
+          "name": "Color Speed",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "onlyInt": false,
+          "command": ".hud color-speed",
+          "decimals": 1
+        },
+        {
+          "name": "Color Saturation",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".hud color-saturation"
+        },
+        {
+          "name": "Color Brightness",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".hud color-brightness"
+        },
+        {
+          "name": "Offset-X",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 255,
+          "onlyInt": true,
+          "command": ".hud offset-x"
+        },
+        {
+          "name": "Offset-Y",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 255,
+          "onlyInt": true,
+          "command": ".hud offset-y"
+        },
+        {
+          "name": "Scale",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "onlyInt": false,
+          "command": ".hud scale",
+          "decimals": 1
+        },
+        {
+          "name": "Background",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".hud background"
+        },
+        {
+          "name": "Bar",
+          "type": "check",
+          "value": false,
+          "command": ".hud bar"
+        },
+        {
+          "name": "Shadow",
+          "type": "check",
+          "value": false,
+          "command": ".hud shadow"
+        },
+        {
+          "name": "Lower Case",
+          "type": "check",
+          "value": false,
+          "command": ".hud lower-case"
+        },
+        {
+          "name": "Chat Outline",
+          "type": "check",
+          "value": false,
+          "command": ".hud chat-outline"
+        },
+        {
+          "name": "Blink Timer",
+          "type": "check",
+          "value": false,
+          "command": ".hud blink-timer"
+        },
+        {
+          "name": "Toggle Sounds",
+          "type": "check",
+          "value": false,
+          "command": ".hud toggle-sounds"
+        },
+        {
+          "name": "Toggle Alerts",
+          "type": "check",
+          "value": false,
+          "command": ".hud toggle-alerts"
+        }
+      ]
+    },
+    {
+      "name": "AntiFireball",
+      "category": "PLAYER",
+      "toggleName": "AntiFireball",
+      "settings": [
+        {
+          "name": "Range",
+          "type": "slider",
+          "value": 5,
+          "min": 3,
+          "max": 16,
+          "onlyInt": false,
+          "command": ".antifireball range",
+          "decimals": 1
+        },
+        {
+          "name": "FOV",
+          "type": "slider",
+          "value": 180,
+          "min": 1,
+          "max": 360,
+          "onlyInt": true,
+          "command": ".antifireball fov"
+        },
+        {
+          "name": "Rotations",
+          "type": "check",
+          "value": false,
+          "command": ".antifireball rotations"
+        },
+        {
+          "name": "Swing",
+          "type": "check",
+          "value": false,
+          "command": ".antifireball swing"
+        }
+      ]
+    },
+    {
+      "name": "AntiObbyTrap",
+      "category": "OTHER",
+      "toggleName": "AntiObbyTrap",
+      "settings": [
+        {
+          "name": "Set Air",
+          "type": "check",
+          "value": false,
+          "command": ".antiobbytrap set-air"
+        }
+      ]
+    },
+    {
+      "name": "AutoWho",
+      "category": "OTHER",
+      "toggleName": "AutoWho",
+      "settings": [
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 1,
+          "min": 0,
+          "max": 5,
+          "onlyInt": false,
+          "command": ".autowho delay",
+          "decimals": 1
+        }
+      ]
+    },
+    {
+      "name": "AntiVoid",
+      "category": "PLAYER",
+      "toggleName": "AntiVoid",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "Blink",
+          "options": [
+            "BLINK"
+          ],
+          "command": ".antivoid mode",
+          "lowercase": true
+        },
+        {
+          "name": "Distance",
+          "type": "slider",
+          "value": 8,
+          "min": 0,
+          "max": 16,
+          "onlyInt": false,
+          "command": ".antivoid distance",
+          "decimals": 1
+        },
+        {
+          "name": "LJ Fix",
+          "type": "check",
+          "value": false,
+          "command": ".antivoid lj-fix"
+        }
+      ]
+    },
+    {
+      "name": "AutoClicker",
+      "category": "COMBAT",
+      "toggleName": "AutoClicker",
+      "settings": [
+        {
+          "name": "Max CPS",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".autoclicker max-cps"
+        },
+        {
+          "name": "Min CPS",
+          "type": "slider",
+          "value": 5,
+          "min": 0,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".autoclicker min-cps"
+        },
+        {
+          "name": "Block Hit",
+          "type": "check",
+          "value": false,
+          "command": ".autoclicker block-hit"
+        },
+        {
+          "name": "Weapons Only",
+          "type": "check",
+          "value": false,
+          "command": ".autoclicker weapons-only"
+        },
+        {
+          "name": "Allow Tools",
+          "type": "check",
+          "value": false,
+          "command": ".autoclicker allow-tools"
+        },
+        {
+          "name": "Break Blocks",
+          "type": "check",
+          "value": false,
+          "command": ".autoclicker break-blocks"
+        }
+      ]
+    },
+    {
+      "name": "AutoHeal",
+      "category": "PLAYER",
+      "toggleName": "AutoHeal",
+      "settings": [
+        {
+          "name": "Health",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".autoheal health"
+        },
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 1000,
+          "min": 0,
+          "max": 5000,
+          "onlyInt": true,
+          "command": ".autoheal delay"
+        },
+        {
+          "name": "Regen Check",
+          "type": "check",
+          "value": false,
+          "command": ".autoheal regen-check"
+        }
+      ]
+    },
+    {
+      "name": "AutoTool",
+      "category": "PLAYER",
+      "toggleName": "AutoTool",
+      "settings": [
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 1,
+          "min": 0,
+          "max": 5,
+          "onlyInt": true,
+          "command": ".autotool delay"
+        },
+        {
+          "name": "Switch Back",
+          "type": "check",
+          "value": false,
+          "command": ".autotool switch-back"
+        },
+        {
+          "name": "Sneak Only",
+          "type": "check",
+          "value": false,
+          "command": ".autotool sneak-only"
+        }
+      ]
+    },
+    {
+      "name": "BBLR",
+      "category": "OTHER",
+      "toggleName": "BBLR",
+      "settings": [
+        {
+          "name": "Alerts",
+          "type": "check",
+          "value": false,
+          "command": ".bblr alerts"
+        },
+        {
+          "name": "Alerts On Pearl",
+          "type": "check",
+          "value": false,
+          "command": ".bblr alerts-on-pearl"
+        },
+        {
+          "name": "Macro",
+          "type": "check",
+          "value": false,
+          "command": ".bblr macro"
+        },
+        {
+          "name": "HUD",
+          "type": "check",
+          "value": false,
+          "command": ".bblr hud"
+        },
+        {
+          "name": "HUD Shadow",
+          "type": "check",
+          "value": false,
+          "command": ".bblr hud-shadow"
+        },
+        {
+          "name": "Alerts Range",
+          "type": "slider",
+          "value": 50,
+          "min": 8,
+          "max": 128,
+          "onlyInt": true,
+          "command": ".bblr alerts-range"
+        },
+        {
+          "name": "Alerts Frequency",
+          "type": "slider",
+          "value": 10,
+          "min": 1,
+          "max": 30,
+          "onlyInt": true,
+          "command": ".bblr alerts-frequency"
+        },
+        {
+          "name": "Macro Range",
+          "type": "slider",
+          "value": 50,
+          "min": 8,
+          "max": 128,
+          "onlyInt": true,
+          "command": ".bblr macro-range"
+        },
+        {
+          "name": "Macro Delay",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 10,
+          "onlyInt": true,
+          "command": ".bblr macro-delay"
+        },
+        {
+          "name": "HUD Offset-X",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 255,
+          "onlyInt": true,
+          "command": ".bblr hud-offset-x"
+        },
+        {
+          "name": "HUD Offset-Y",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 255,
+          "onlyInt": true,
+          "command": ".bblr hud-offset-y"
+        },
+        {
+          "name": "HUD Scale",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "onlyInt": false,
+          "command": ".bblr hud-scale",
+          "decimals": 1
+        },
+        {
+          "name": "Alerts Sound",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "MEOW",
+            "ANVIL"
+          ],
+          "command": ".bblr alerts-sound",
+          "lowercase": true
+        },
+        {
+          "name": "HUD Pos-X",
+          "type": "combo",
+          "value": "LEFT",
+          "options": [
+            "LEFT",
+            "MIDDLE",
+            "RIGHT"
+          ],
+          "command": ".bblr hud-position-x",
+          "lowercase": true
+        },
+        {
+          "name": "HUD Pos-Y",
+          "type": "combo",
+          "value": "TOP",
+          "options": [
+            "TOP",
+            "MIDDLE",
+            "BOTTOM"
+          ],
+          "command": ".bblr hud-position-y",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "BedESP",
+      "category": "RENDER",
+      "toggleName": "BedESP",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "DEFAULT",
+          "options": [
+            "DEFAULT",
+            "FULL"
+          ],
+          "command": ".bedesp mode",
+          "lowercase": true
+        },
+        {
+          "name": "Color",
+          "type": "combo",
+          "value": "CUSTOM",
+          "options": [
+            "CUSTOM",
+            "HUD"
+          ],
+          "command": ".bedesp color",
+          "lowercase": true
+        },
+        {
+          "name": "Opacity",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".bedesp opacity"
+        },
+        {
+          "name": "Outline",
+          "type": "check",
+          "value": true,
+          "command": ".bedesp outline"
+        },
+        {
+          "name": "Obsidian",
+          "type": "check",
+          "value": false,
+          "command": ".bedesp obsidian"
+        }
+      ]
+    },
+    {
+      "name": "Blink",
+      "category": "MOVEMENT",
+      "toggleName": "Blink"
+    },
+    {
+      "name": "Chams",
+      "category": "RENDER",
+      "toggleName": "chams",
+      "settings": [
+        {
+          "name": "Players",
+          "type": "check",
+          "value": false,
+          "command": ".chams players"
+        },
+        {
+          "name": "Friends",
+          "type": "check",
+          "value": false,
+          "command": ".chams friends"
+        },
+        {
+          "name": "Enemies",
+          "type": "check",
+          "value": false,
+          "command": ".chams enemies"
+        },
+        {
+          "name": "Bosses",
+          "type": "check",
+          "value": false,
+          "command": ".chams bosses"
+        },
+        {
+          "name": "Mobs",
+          "type": "check",
+          "value": false,
+          "command": ".chams mobs"
+        },
+        {
+          "name": "Creepers",
+          "type": "check",
+          "value": false,
+          "command": ".chams creepers"
+        },
+        {
+          "name": "Endermen",
+          "type": "check",
+          "value": false,
+          "command": ".chams endermen"
+        },
+        {
+          "name": "Blazes",
+          "type": "check",
+          "value": false,
+          "command": ".chams blazes"
+        },
+        {
+          "name": "Animals",
+          "type": "check",
+          "value": false,
+          "command": ".chams animals"
+        },
+        {
+          "name": "Self",
+          "type": "check",
+          "value": false,
+          "command": ".chams self"
+        },
+        {
+          "name": "Bots",
+          "type": "check",
+          "value": false,
+          "command": ".chams bots"
+        }
+      ]
+    },
+    {
+      "name": "ChestStealer",
+      "category": "PLAYER",
+      "toggleName": "cheststealer",
+      "settings": [
+        {
+          "name": "Min Delay",
+          "type": "slider",
+          "value": 5,
+          "min": 1,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".cheststealer min-delay"
+        },
+        {
+          "name": "Max Delay",
+          "type": "slider",
+          "value": 10,
+          "min": 1,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".cheststealer max-delay"
+        },
+        {
+          "name": "Open Delay",
+          "type": "slider",
+          "value": 5,
+          "min": 1,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".cheststealer open-delay"
+        },
+        {
+          "name": "Auto Close",
+          "type": "check",
+          "value": false,
+          "command": ".cheststealer auto-close"
+        },
+        {
+          "name": "Name Check",
+          "type": "check",
+          "value": false,
+          "command": ".cheststealer name-check"
+        },
+        {
+          "name": "Skip Trash",
+          "type": "check",
+          "value": false,
+          "command": ".cheststealer skip-trash"
+        }
+      ]
+    },
+    {
+      "name": "Eagle",
+      "category": "PLAYER",
+      "toggleName": "Eagle",
+      "settings": [
+        {
+          "name": "Min Delay",
+          "type": "slider",
+          "value": 5,
+          "min": 1,
+          "max": 10,
+          "onlyInt": true,
+          "command": ".eagle min-delay"
+        },
+        {
+          "name": "Max Delay",
+          "type": "slider",
+          "value": 8,
+          "min": 1,
+          "max": 10,
+          "onlyInt": true,
+          "command": ".eagle max-delay"
+        },
+        {
+          "name": "Direction Check",
+          "type": "check",
+          "value": false,
+          "command": ".eagle direction-check"
+        },
+        {
+          "name": "Pitch Check",
+          "type": "check",
+          "value": false,
+          "command": ".eagle pitch-check"
+        },
+        {
+          "name": "Blocks Only",
+          "type": "check",
+          "value": false,
+          "command": ".eagle blocks-only"
+        }
+      ]
+    },
+    {
+      "name": "ESP",
+      "category": "RENDER",
+      "toggleName": "ESP",
+      "settings": [
+        {
+          "name": "Box",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "2D",
+            "3D",
+            "OUTLINE"
+          ],
+          "command": ".esp box ",
+          "lowercase": true
+        },
+        {
+          "name": "Color",
+          "type": "combo",
+          "value": "DEFAULT",
+          "options": [
+            "DEFAULT",
+            "TEAMS",
+            "HUD"
+          ],
+          "command": ".esp color ",
+          "lowercase": true
+        },
+        {
+          "name": "Health Bar",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "DEFAULT",
+            "RAVEN"
+          ],
+          "command": ".esp health-bar ",
+          "lowercase": true
+        },
+        {
+          "name": "Players",
+          "type": "check",
+          "value": false,
+          "command": ".esp players "
+        },
+        {
+          "name": "Friends",
+          "type": "check",
+          "value": false,
+          "command": ".esp friends "
+        },
+        {
+          "name": "Enemies",
+          "type": "check",
+          "value": false,
+          "command": ".esp enemies"
+        },
+        {
+          "name": "Self",
+          "type": "check",
+          "value": false,
+          "command": ".esp self "
+        },
+        {
+          "name": "Bots",
+          "type": "check",
+          "value": false,
+          "command": ".esp bots "
+        }
+      ]
+    },
+    {
+      "name": "Fly",
+      "category": "MOVEMENT",
+      "toggleName": "fly",
+      "settings": [
+        {
+          "name": "Horizontal Speed",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 100,
+          "onlyInt": false,
+          "command": ".fly horizontal-speed",
+          "decimals": 1
+        },
+        {
+          "name": "Vertical Speed",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 100,
+          "onlyInt": false,
+          "command": ".fly vertical-speed",
+          "decimals": 1
+        }
+      ]
+    },
+    {
+      "name": "GhostHand",
+      "category": "RENDER",
+      "toggleName": "ghosthand",
+      "settings": [
+        {
+          "name": "Team Only",
+          "type": "check",
+          "value": false,
+          "command": ".ghosthand team-only"
+        },
+        {
+          "name": "Ignore Weapons",
+          "type": "check",
+          "value": false,
+          "command": ".ghosthand ignore-weapons"
+        }
+      ]
+    },
+    {
+      "name": "Indicators",
+      "category": "RENDER",
+      "toggleName": "indicators",
+      "settings": [
+        {
+          "name": "Scale",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "onlyInt": false,
+          "command": ".indicators scale",
+          "decimals": 1
+        },
+        {
+          "name": "Offset",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 255,
+          "onlyInt": false,
+          "command": ".indicators offset",
+          "decimals": 1
+        },
+        {
+          "name": "Direction Check",
+          "type": "check",
+          "value": false,
+          "command": ".indicators direction-check"
+        },
+        {
+          "name": "Fireballs",
+          "type": "check",
+          "value": false,
+          "command": ".indicators fireballs"
+        },
+        {
+          "name": "Pearls",
+          "type": "check",
+          "value": false,
+          "command": ".indicators pearls"
+        },
+        {
+          "name": "Arrows",
+          "type": "check",
+          "value": false,
+          "command": ".indicators arrows"
+        }
+      ]
+    },
+    {
+      "name": "InvManager",
+      "category": "PLAYER",
+      "toggleName": "invmanager",
+      "settings": [
+        {
+          "name": "Min Delay",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".invmanager min-delay"
+        },
+        {
+          "name": "Max Delay",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".invmanager max-delay"
+        },
+        {
+          "name": "Open Delay",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".invmanager open-delay"
+        },
+        {
+          "name": "Sword Slot",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 9,
+          "onlyInt": true,
+          "command": ".invmanager sword-slot"
+        },
+        {
+          "name": "Block Slot",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 9,
+          "onlyInt": true,
+          "command": ".invmanager block-slot"
+        },
+        {
+          "name": "Auto Armor",
+          "type": "check",
+          "value": false,
+          "command": ".invmanager auto-armor"
+        },
+        {
+          "name": "Drop Trash",
+          "type": "check",
+          "value": false,
+          "command": ".invmanager drop-trash"
+        }
+      ]
+    },
+    {
+      "name": "InvWalk",
+      "category": "MOVEMENT",
+      "toggleName": "invwalk",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "VANILLA",
+          "options": [
+            "VANILLA",
+            "LEGIT"
+          ],
+          "command": ".invwalk mode",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "ItemESP",
+      "category": "RENDER",
+      "toggleName": "itemesp",
+      "settings": [
+        {
+          "name": "Opacity",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".itemesp opacity"
+        },
+        {
+          "name": "Outline",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp outline"
+        },
+        {
+          "name": "Item Count",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp item-count"
+        },
+        {
+          "name": "Auto Scale",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp auto-scale"
+        },
+        {
+          "name": "Emeralds",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp emeralds"
+        },
+        {
+          "name": "Diamonds",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp diamonds"
+        },
+        {
+          "name": "Gold",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp gold"
+        },
+        {
+          "name": "Iron",
+          "type": "check",
+          "value": false,
+          "command": ".itemesp iron"
+        }
+      ]
+    },
+    {
+      "name": "Jesus",
+      "category": "MOVEMENT",
+      "toggleName": "jesus",
+      "settings": [
+        {
+          "name": "Speed",
+          "type": "slider",
+          "value": 1.5,
+          "min": 0,
+          "max": 3,
+          "onlyInt": false,
+          "command": ".jesus speed",
+          "decimals": 1
+        },
+        {
+          "name": "No Push",
+          "type": "check",
+          "value": false,
+          "command": ".jesus no-push"
+        },
+        {
+          "name": "Ground Only",
+          "type": "check",
+          "value": false,
+          "command": ".jesus ground-only"
+        }
+      ]
+    },
+    {
+      "name": "KeepSprint",
+      "category": "MOVEMENT",
+      "toggleName": "keepsprint",
+      "settings": [
+        {
+          "name": "Slowdown",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".keepsprint slowdown"
+        },
+        {
+          "name": "Ground Only",
+          "type": "check",
+          "value": false,
+          "command": ".keepsprint ground-only"
+        },
+        {
+          "name": "Reach Only",
+          "type": "check",
+          "value": false,
+          "command": ".keepsprint reach-only"
+        }
+      ]
+    },
+    {
+      "name": "Killaura",
+      "category": "COMBAT",
+      "toggleName": "killaura",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "SINGLE",
+          "options": [
+            "SINGLE",
+            "SWITCH"
+          ],
+          "command": ".killaura mode",
+          "lowercase": true
+        },
+        {
+          "name": "Sort",
+          "type": "combo",
+          "value": "DISTANCE",
+          "options": [
+            "DISTANCE",
+            "HEALTH",
+            "HURT_TIME",
+            "FOV"
+          ],
+          "command": ".killaura sort",
+          "lowercase": true
+        },
+        {
+          "name": "Auto Block",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "BLINK",
+            "BLINK2",
+            "SWAP",
+            "LEGIT",
+            "FAKE"
+          ],
+          "command": ".killaura auto-block",
+          "lowercase": true
+        },
+        {
+          "name": "Rotations",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "LEGIT",
+            "SILENT"
+          ],
+          "command": ".killaura rotations",
+          "lowercase": true
+        },
+        {
+          "name": "Auto Block Require Press",
+          "type": "check",
+          "value": false,
+          "command": ".killaura auto-block-require-press"
+        },
+        {
+          "name": "Auto Block Range",
+          "type": "slider",
+          "value": 3,
+          "min": 3,
+          "max": 8,
+          "onlyInt": false,
+          "command": ".killaura auto-block-range",
+          "decimals": 1
+        },
+        {
+          "name": "Swing Range",
+          "type": "slider",
+          "value": 3,
+          "min": 3,
+          "max": 8,
+          "onlyInt": false,
+          "command": ".killaura swing-range",
+          "decimals": 1
+        },
+        {
+          "name": "Attack Range",
+          "type": "slider",
+          "value": 3,
+          "min": 3,
+          "max": 8,
+          "onlyInt": false,
+          "command": ".killaura attack-range",
+          "decimals": 1
+        },
+        {
+          "name": "FOV",
+          "type": "slider",
+          "value": 180,
+          "min": 1,
+          "max": 360,
+          "onlyInt": true,
+          "command": ".killaura fov"
+        },
+        {
+          "name": "Min APS",
+          "type": "slider",
+          "value": 10,
+          "min": 1,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".killaura min-aps"
+        },
+        {
+          "name": "Max APS",
+          "type": "slider",
+          "value": 15,
+          "min": 1,
+          "max": 20,
+          "onlyInt": true,
+          "command": ".killaura max-aps"
+        },
+        {
+          "name": "Switch Delay",
+          "type": "slider",
+          "value": 500,
+          "min": 0,
+          "max": 1000,
+          "onlyInt": true,
+          "command": ".killaura switch-delay"
+        },
+        {
+          "name": "Smoothing",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".killaura smoothing"
+        },
+        {
+          "name": "Angle Step",
+          "type": "slider",
+          "value": 60,
+          "min": 30,
+          "max": 180,
+          "onlyInt": true,
+          "command": ".killaura angle-step"
+        },
+        {
+          "name": "Through Walls",
+          "type": "check",
+          "value": false,
+          "command": ".killaura through-walls"
+        },
+        {
+          "name": "Move Fix",
+          "type": "check",
+          "value": false,
+          "command": ".killaura move-fix"
+        },
+        {
+          "name": "Require Press",
+          "type": "check",
+          "value": false,
+          "command": ".killaura require-press"
+        },
+        {
+          "name": "Allow Mining",
+          "type": "check",
+          "value": false,
+          "command": ".killaura allow-mining"
+        },
+        {
+          "name": "Weapons Only",
+          "type": "check",
+          "value": false,
+          "command": ".killaura weapons-only"
+        },
+        {
+          "name": "Allow Tools",
+          "type": "check",
+          "value": false,
+          "command": ".killaura allow-tools"
+        },
+        {
+          "name": "Inventory Check",
+          "type": "check",
+          "value": false,
+          "command": ".killaura inventory-check"
+        },
+        {
+          "name": "Bot Check",
+          "type": "check",
+          "value": false,
+          "command": ".killaura bot-check"
+        },
+        {
+          "name": "Players",
+          "type": "check",
+          "value": true,
+          "command": ".killaura players"
+        },
+        {
+          "name": "Bosses",
+          "type": "check",
+          "value": true,
+          "command": ".killaura bosses"
+        },
+        {
+          "name": "Mobs",
+          "type": "check",
+          "value": true,
+          "command": ".killaura mobs"
+        }
+      ]
+    },
+    {
+      "name": "LegitSpeed",
+      "category": "MOVEMENT",
+      "toggleName": "legitspeed",
+      "settings": [
+        {
+          "name": "Speed0 Multiplier",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".legitspeed speed0-multiplier",
+          "decimals": 1
+        },
+        {
+          "name": "Speed1 Multiplier",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".legitspeed speed1-multiplier",
+          "decimals": 1
+        },
+        {
+          "name": "Speed2 Multiplier",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".legitspeed speed2-multiplier",
+          "decimals": 1
+        }
+      ]
+    },
+    {
+      "name": "LightningTracker",
+      "category": "RENDER",
+      "toggleName": "lightningtracker"
+    },
+    {
+      "name": "LongJump",
+      "category": "MOVEMENT",
+      "toggleName": "longjump",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "fireball",
+          "options": [
+            "fireball",
+            "fireball2",
+            "auto_fireball",
+            "auto_fireball2"
+          ],
+          "command": ".longjump mode",
+          "lowercase": true
+        },
+        {
+          "name": "Speed",
+          "type": "slider",
+          "value": 3,
+          "min": 1,
+          "max": 20,
+          "onlyInt": false,
+          "command": ".longjump speed",
+          "decimals": 1
+        }
+      ]
+    },
+    {
+      "name": "MCF",
+      "category": "OTHER",
+      "toggleName": "mcf"
+    },
+    {
+      "name": "NameTags",
+      "category": "RENDER",
+      "toggleName": "nametags",
+      "settings": [
+        {
+          "name": "Scale",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 2.5,
+          "onlyInt": false,
+          "command": ".nametags scale",
+          "decimals": 1
+        },
+        {
+          "name": "Background",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".nametags background"
+        },
+        {
+          "name": "Auto Scale",
+          "type": "check",
+          "value": true,
+          "command": ".nametags auto-scale"
+        },
+        {
+          "name": "Shadow",
+          "type": "check",
+          "value": true,
+          "command": ".nametags shadow"
+        },
+        {
+          "name": "Armor",
+          "type": "check",
+          "value": true,
+          "command": ".nametags armor"
+        },
+        {
+          "name": "Effects",
+          "type": "check",
+          "value": true,
+          "command": ".nametags effects"
+        },
+        {
+          "name": "Players",
+          "type": "check",
+          "value": true,
+          "command": ".nametags players"
+        },
+        {
+          "name": "Friends",
+          "type": "check",
+          "value": false,
+          "command": ".nametags friends "
+        },
+        {
+          "name": "Enemies",
+          "type": "check",
+          "value": false,
+          "command": ".nametags enemies"
+        },
+        {
+          "name": "Bosses",
+          "type": "check",
+          "value": true,
+          "command": ".nametags bosses"
+        },
+        {
+          "name": "Mobs",
+          "type": "check",
+          "value": true,
+          "command": ".nametags mobs"
+        },
+        {
+          "name": "Creepers",
+          "type": "check",
+          "value": true,
+          "command": ".nametags creepers"
+        },
+        {
+          "name": "Endermen",
+          "type": "check",
+          "value": true,
+          "command": ".nametags endermen"
+        },
+        {
+          "name": "Blazes",
+          "type": "check",
+          "value": true,
+          "command": ".nametags blazes"
+        },
+        {
+          "name": "Animals",
+          "type": "check",
+          "value": true,
+          "command": ".nametags animals"
+        },
+        {
+          "name": "Self",
+          "type": "check",
+          "value": false,
+          "command": ".nametags self"
+        },
+        {
+          "name": "Bots",
+          "type": "check",
+          "value": true,
+          "command": ".nametags bots"
+        },
+        {
+          "name": "Distance",
+          "type": "combo",
+          "value": "DEFAULT",
+          "options": [
+            "NONE",
+            "DEFAULT",
+            "VAPE"
+          ],
+          "command": ".nametags distance",
+          "lowercase": true
+        },
+        {
+          "name": "Health",
+          "type": "combo",
+          "value": "HP",
+          "options": [
+            "NONE",
+            "HP",
+            "HEARTS"
+          ],
+          "command": ".nametags health",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "NoFall",
+      "category": "PLAYER",
+      "toggleName": "NoFall",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "NO_GROUND",
+          "options": [
+            "NO_GROUND",
+            "NO_GROUND2",
+            "BLINK",
+            "PACKET",
+            "SPOOF",
+            "JUMP"
+          ],
+          "command": ".nofall mode",
+          "lowercase": true
+        },
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 10000,
+          "onlyInt": true,
+          "command": ".nofall delay"
+        }
+      ]
+    },
+    {
+      "name": "NoHitDelay",
+      "category": "PLAYER",
+      "toggleName": "NoHitDelay"
+    },
+    {
+      "name": "NickHider",
+      "category": "CLIENT",
+      "toggleName": "NickHider",
+      "settings": [
+        {
+          "name": "Scoreboard",
+          "type": "check",
+          "value": false,
+          "command": ".nickhider scoreboard"
+        },
+        {
+          "name": "Level",
+          "type": "check",
+          "value": false,
+          "command": ".nickhider level"
+        }
+      ]
+    },
+    {
+      "name": "NoHurtcam",
+      "category": "RENDER",
+      "toggleName": "NoHurtcam",
+      "settings": [
+        {
+          "name": "Multiplier",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".nohurtcam multiplier"
+        }
+      ]
+    },
+    {
+      "name": "NoJumpDelay",
+      "category": "PLAYER",
+      "toggleName": "NoJumpDelay",
+      "settings": [
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 5,
+          "min": 0,
+          "max": 8,
+          "onlyInt": true,
+          "command": ".nojumpdelay delay"
+        }
+      ]
+    },
+    {
+      "name": "NoRotate",
+      "category": "PLAYER",
+      "toggleName": "NoRotate"
+    },
+    {
+      "name": "NoSlowdown",
+      "category": "MOVEMENT",
+      "toggleName": "NoSlow",
+      "settings": [
+        {
+          "name": "Sword Mode",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "FAKE"
+          ],
+          "command": ".noslow sword-mode",
+          "lowercase": true
+        },
+        {
+          "name": "Food Mode",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "BLINK",
+            "HYPIXEL"
+          ],
+          "command": ".noslow food-mode",
+          "lowercase": true
+        },
+        {
+          "name": "Bow Mode",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "HYPIXEL"
+          ],
+          "command": ".noslow bow-mode",
+          "lowercase": true
+        },
+        {
+          "name": "Sword Motion",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".noslow sword-motion"
+        },
+        {
+          "name": "Food Motion",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".noslow food-motion"
+        },
+        {
+          "name": "Bow Motion",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".noslow bow-motion"
+        },
+        {
+          "name": "Sword Sprint",
+          "type": "check",
+          "value": false,
+          "command": ".noslow sword-sprint"
+        },
+        {
+          "name": "Food Sprint",
+          "type": "check",
+          "value": false,
+          "command": ".noslow food-sprint"
+        },
+        {
+          "name": "Bow Sprint",
+          "type": "check",
+          "value": false,
+          "command": ".noslow bow-sprint"
+        }
+      ]
+    },
+    {
+      "name": "Reach",
+      "category": "COMBAT",
+      "toggleName": "Reach",
+      "settings": [
+        {
+          "name": "Range",
+          "type": "slider",
+          "value": 3,
+          "min": 3,
+          "max": 6,
+          "onlyInt": false,
+          "command": ".reach range",
+          "decimals": 1
+        },
+        {
+          "name": "Chance",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".reach chance"
+        }
+      ]
+    },
+    {
+      "name": "Safewalk",
+      "category": "PLAYER",
+      "toggleName": "Safewalk",
+      "settings": [
+        {
+          "name": "Motion",
+          "type": "slider",
+          "value": 0.5,
+          "min": 0.5,
+          "max": 1,
+          "onlyInt": false,
+          "command": ".safewalk motion",
+          "decimals": 1
+        },
+        {
+          "name": "Speed Motion",
+          "type": "slider",
+          "value": 1,
+          "min": 0.5,
+          "max": 1.5,
+          "onlyInt": false,
+          "command": ".safewalk speed-motion",
+          "decimals": 1
+        },
+        {
+          "name": "Air",
+          "type": "check",
+          "value": false,
+          "command": ".safewalk air"
+        },
+        {
+          "name": "Direction Check",
+          "type": "check",
+          "value": false,
+          "command": ".safewalk direction-check"
+        },
+        {
+          "name": "Pitch Check",
+          "type": "check",
+          "value": false,
+          "command": ".safewalk pitch-check"
+        },
+        {
+          "name": "Require Press",
+          "type": "check",
+          "value": false,
+          "command": ".safewalk require-press"
+        },
+        {
+          "name": "Blocks Only",
+          "type": "check",
+          "value": false,
+          "command": ".safewalk blocks-only"
+        }
+      ]
+    },
+    {
+      "name": "Scaffold",
+      "category": "PLAYER",
+      "toggleName": "Scaffold",
+      "settings": [
+        {
+          "name": "Ground Motion",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".scaffold ground-motion"
+        },
+        {
+          "name": "Air Motion",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".scaffold air-motion"
+        },
+        {
+          "name": "Rotations",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "DEFAULT"
+          ],
+          "command": ".scaffold rotations",
+          "lowercase": true
+        },
+        {
+          "name": "Tower",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "JUMP",
+            "HYPIXEL"
+          ],
+          "command": ".scaffold tower",
+          "lowercase": true
+        },
+        {
+          "name": "Sprint",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "HYPIXEL"
+          ],
+          "command": ".scaffold sprint",
+          "lowercase": true
+        },
+        {
+          "name": "Keep Y",
+          "type": "combo",
+          "value": "NONE",
+          "options": [
+            "NONE",
+            "VANILLA",
+            "HYPIXEL"
+          ],
+          "command": ".scaffold keep-y",
+          "lowercase": true
+        },
+        {
+          "name": "Keep Y On Press",
+          "type": "check",
+          "value": false,
+          "command": ".scaffold keep-y-on-press"
+        },
+        {
+          "name": "Swing",
+          "type": "check",
+          "value": false,
+          "command": ".scaffold swing"
+        },
+        {
+          "name": "Block Counter",
+          "type": "check",
+          "value": false,
+          "command": ".scaffold block-counter"
+        }
+      ]
+    },
+    {
+      "name": "SilentSprint",
+      "category": "MOVEMENT",
+      "toggleName": "SilentSprint"
+    },
+    {
+      "name": "Spammer",
+      "category": "OTHER",
+      "toggleName": "Spammer",
+      "settings": [
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 10,
+          "min": 0,
+          "max": 3600,
+          "onlyInt": false,
+          "command": ".spammer delay",
+          "decimals": 1
+        },
+        {
+          "name": "Random",
+          "type": "slider",
+          "value": 0,
+          "min": 0,
+          "max": 10,
+          "onlyInt": true,
+          "command": ".spammer random"
+        }
+      ]
+    },
+    {
+      "name": "Speed",
+      "category": "MOVEMENT",
+      "toggleName": "Speed",
+      "settings": [
+        {
+          "name": "Multiplier",
+          "type": "slider",
+          "value": 1,
+          "min": 0,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".speed multiplier",
+          "decimals": 1
+        },
+        {
+          "name": "Friction",
+          "type": "slider",
+          "value": 1,
+          "min": 0,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".speed friction",
+          "decimals": 1
+        },
+        {
+          "name": "Strafe",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".speed strafe"
+        },
+        {
+          "name": "Strafe Limit",
+          "type": "slider",
+          "value": 1,
+          "min": 0,
+          "max": 10,
+          "onlyInt": false,
+          "command": ".speed strafe-limit",
+          "decimals": 1
+        },
+        {
+          "name": "Damage Boost",
+          "type": "check",
+          "value": false,
+          "command": ".speed damage-boost"
+        }
+      ]
+    },
+    {
+      "name": "Speedmine",
+      "category": "PLAYER",
+      "toggleName": "Speedmine",
+      "settings": [
+        {
+          "name": "Speed",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".speedmine speed"
+        },
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 2,
+          "min": 0,
+          "max": 4,
+          "onlyInt": true,
+          "command": ".speedmine delay"
+        }
+      ]
+    },
+    {
+      "name": "Sprint",
+      "category": "MOVEMENT",
+      "toggleName": "Sprint"
+    },
+    {
+      "name": "Tracers",
+      "category": "RENDER",
+      "toggleName": "tracers",
+      "settings": [
+        {
+          "name": "Lines",
+          "type": "check",
+          "value": false,
+          "command": ".tracers lines"
+        },
+        {
+          "name": "Arrows",
+          "type": "check",
+          "value": false,
+          "command": ".tracers arrows"
+        },
+        {
+          "name": "Bots",
+          "type": "check",
+          "value": false,
+          "command": ".tracers bots"
+        },
+        {
+          "name": "Opacity",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".tracers opacity"
+        },
+        {
+          "name": "Color",
+          "type": "combo",
+          "value": "DEFAULT",
+          "options": [
+            "DEFAULT",
+            "TEAMS",
+            "HUD"
+          ],
+          "command": ".tracers color",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "Trajectories",
+      "category": "RENDER",
+      "toggleName": "trajectories",
+      "settings": [
+        {
+          "name": "Bow",
+          "type": "check",
+          "value": false,
+          "command": ".trajectories bow"
+        },
+        {
+          "name": "Projectiles",
+          "type": "check",
+          "value": false,
+          "command": ".trajectories projectiles"
+        },
+        {
+          "name": "Pearls",
+          "type": "check",
+          "value": false,
+          "command": ".trajectories pearls"
+        },
+        {
+          "name": "Opacity",
+          "type": "slider",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".trajectories opacity"
+        }
+      ]
+    },
+    {
+      "name": "Velocity",
+      "category": "COMBAT",
+      "toggleName": "velocity",
+      "settings": [
+        {
+          "name": "Horizontal",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".velocity horizontal"
+        },
+        {
+          "name": "Vertical",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".velocity vertical"
+        },
+        {
+          "name": "Explosions Horizontal",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".velocity explosions-horizontal"
+        },
+        {
+          "name": "Explosions Vertical",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".velocity explosions-vertical"
+        },
+        {
+          "name": "Fake Check",
+          "type": "check",
+          "value": false,
+          "command": ".velocity fake-check"
+        },
+        {
+          "name": "Debug Log",
+          "type": "check",
+          "value": false,
+          "command": ".velocity debug-log"
+        },
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "VANILLA",
+          "options": [
+            "VANILLA",
+            "REVERSE"
+          ],
+          "command": ".velocity mode",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "ViewClip",
+      "category": "OTHER",
+      "toggleName": "viewclip"
+    },
+    {
+      "name": "Xray",
+      "category": "RENDER",
+      "toggleName": "Xray",
+      "settings": [
+        {
+          "name": "Opacity",
+          "type": "slider",
+          "value": 100,
+          "min": 0,
+          "max": 100,
+          "onlyInt": true,
+          "command": ".xray opacity"
+        },
+        {
+          "name": "Range",
+          "type": "slider",
+          "value": 16,
+          "min": 16,
+          "max": 512,
+          "onlyInt": true,
+          "command": ".xray range"
+        },
+        {
+          "name": "Caves Radius",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 2,
+          "onlyInt": true,
+          "command": ".xray caves-radius"
+        },
+        {
+          "name": "Caves Only",
+          "type": "check",
+          "value": false,
+          "command": ".xray caves-only"
+        },
+        {
+          "name": "Diamonds",
+          "type": "check",
+          "value": false,
+          "command": ".xray diamonds"
+        },
+        {
+          "name": "Diamonds Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray diamonds-tracers"
+        },
+        {
+          "name": "Gold",
+          "type": "check",
+          "value": false,
+          "command": ".xray gold"
+        },
+        {
+          "name": "Gold Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray gold-tracers"
+        },
+        {
+          "name": "Iron",
+          "type": "check",
+          "value": false,
+          "command": ".xray iron"
+        },
+        {
+          "name": "Iron Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray iron-tracers"
+        },
+        {
+          "name": "Coal",
+          "type": "check",
+          "value": false,
+          "command": ".xray coal"
+        },
+        {
+          "name": "Coal Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray coal-tracers"
+        },
+        {
+          "name": "Redstone",
+          "type": "check",
+          "value": false,
+          "command": ".xray redstone"
+        },
+        {
+          "name": "Redstone Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray redstone-tracers"
+        },
+        {
+          "name": "Lapis",
+          "type": "check",
+          "value": false,
+          "command": ".xray lapis"
+        },
+        {
+          "name": "Lapis Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray lapis-tracers"
+        },
+        {
+          "name": "Emeralds",
+          "type": "check",
+          "value": false,
+          "command": ".xray emeralds"
+        },
+        {
+          "name": "Emeralds Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray emeralds-tracers"
+        },
+        {
+          "name": "Spawners",
+          "type": "check",
+          "value": false,
+          "command": ".xray spawners"
+        },
+        {
+          "name": "Spawners Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray spawners-tracers"
+        },
+        {
+          "name": "Canes",
+          "type": "check",
+          "value": false,
+          "command": ".xray canes"
+        },
+        {
+          "name": "Canes Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray canes-tracers"
+        },
+        {
+          "name": "Warts",
+          "type": "check",
+          "value": false,
+          "command": ".xray warts"
+        },
+        {
+          "name": "Warts Tracers",
+          "type": "check",
+          "value": false,
+          "command": ".xray warts-tracers"
+        },
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "SOFT",
+          "options": [
+            "SOFT",
+            "FULL"
+          ],
+          "command": ".xray mode",
+          "lowercase": true
+        }
+      ]
+    },
+    {
+      "name": "FastPlace",
+      "category": "PLAYER",
+      "toggleName": "fastplace",
+      "settings": [
+        {
+          "name": "Delay",
+          "type": "slider",
+          "value": 1,
+          "min": 1,
+          "max": 3,
+          "onlyInt": true,
+          "command": ".fastplace delay"
+        },
+        {
+          "name": "Blocks Only",
+          "type": "check",
+          "value": false,
+          "command": ".fastplace blocks-only"
+        },
+        {
+          "name": "Place Fix",
+          "type": "check",
+          "value": false,
+          "command": ".fastplace place-fix"
+        }
+      ]
+    },
+    {
+      "name": "AntiObfuscation",
+      "category": "OTHER",
+      "toggleName": "antiobfuscate"
+    },
+    {
+      "name": "Fullbright",
+      "category": "RENDER",
+      "toggleName": "fullbright",
+      "settings": [
+        {
+          "name": "Mode",
+          "type": "combo",
+          "value": "GAMMA",
+          "options": [
+            "GAMMA",
+            "EFFECT"
+          ],
+          "command": ".fullbright mode",
+          "lowercase": true
+        }
+      ]
+    }
+  ]
+}

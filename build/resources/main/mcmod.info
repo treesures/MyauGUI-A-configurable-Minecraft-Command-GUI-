@@ -1,0 +1,12 @@
+[
+{
+  "modid": "weirdGUI",
+  "name": "weirdGUI",
+  "description": "Configurable ClickGUI bridge. Modules and settings are defined in config/weirdGUI/modules.json. Edit the file and /gui reload when the client updates.",
+  "version": "2.0",
+  "mcversion": "1.8.9",
+  "authorList": ["LucidDeveloper"],
+  "credits": "lilac ClickGUI framework by dreamys",
+  "dependencies": []
+}
+]
